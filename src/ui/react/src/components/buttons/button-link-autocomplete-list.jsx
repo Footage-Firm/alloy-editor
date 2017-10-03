@@ -11,46 +11,7 @@
     var ButtonLinkAutocompleteList = React.createClass({
         mixins: [AlloyEditor.WidgetFocusManager],
 
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * Autocomplete function
-             *
-             * @instance
-             * @memberof ButtonLinkAutocompleteList
-             * @property {Function} data
-             */
-            data: React.PropTypes.func,
-
-            /**
-             * Indicates if this is focused when this component is updated
-             *
-             * @instance
-             * @memberof ButtonLinkAutocompleteList
-             * @property {Boolean} autocompleteSelected
-             */
-            autocompleteSelected: React.PropTypes.bool,
-
-            /**
-             * The current term to autocomplete for
-             *
-             * @instance
-             * @memberof ButtonLinkAutocompleteList
-             * @property {String} term
-             */
-            term: React.PropTypes.string,
-
-            /**
-            * Method to update parent selectautocomplete state
-            *
-             * @instance
-             * @memberof ButtonLinkAutocompleteList
-            * @property {Function} setAutocompleteState
-            */
-            setAutocompleteState: React.PropTypes.func
-
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

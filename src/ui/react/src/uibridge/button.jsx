@@ -9,47 +9,7 @@
     /* istanbul ignore next */
     function noop() {}
 
-    // API not yet implemented inside the button bridge. By mocking the unsupported methods, we
-    // prevent plugins from crashing if they make use of them.
-    //
-    // Some methods like `getState` and `setState` clash with React's own state methods. For them,
-    // unsupported means that we don't account for the different meaning in the passed or returned
-    // arguments.
-    var UNSUPPORTED_BUTTON_API = {
-        //getState: function() {},
-        //setState: function(state) {},
-        toFeature: noop
-    };
-
-    var BUTTON_DEFS = {};
-
-    /**
-     * Generates a ButtonBridge React class for a given button definition if it has not been
-     * already created based on the button name and definition.
-     *
-     * @private
-     * @method generateButtonBridge
-     * @param {String} buttonName The button's name
-     * @param {Object} buttonDefinition The button's definition
-     * @return {Object} The generated or already existing React Button Class
-     */
-
-    function generateButtonBridge(buttonName, buttonDefinition, editor) {
-        var ButtonBridge = AlloyEditor.Buttons[buttonName];
-
-        BUTTON_DEFS[editor.name] = BUTTON_DEFS[editor.name] || {};
-        BUTTON_DEFS[editor.name][buttonName] = BUTTON_DEFS[editor.name][buttonName] || buttonDefinition;
-
-        if (!ButtonBridge) {
-            ButtonBridge = React.createClass(
-                CKEDITOR.tools.merge(UNSUPPORTED_BUTTON_API, {
-                    displayName: buttonName,
-
-                    propTypes: {
-                        editor: React.PropTypes.object.isRequired,
-                        tabIndex: React.PropTypes.number
-                    },
-
+    
                     statics: {
                         key: buttonName
                     },

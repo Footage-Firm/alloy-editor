@@ -11,26 +11,6 @@
     var ButtonCommandListItem = React.createClass({
         mixins: [AlloyEditor.ButtonCommand],
 
-        propTypes: {
-            /**
-             * The command label or description to render in the list entry.
-             *
-             * @instance
-             * @memberof ButtonCommandListItem
-             * @property {String} description
-             */
-            description: React.PropTypes.string.isRequired,
-
-            /**
-             * The command icon to render in the list entry.
-             *
-             * @instance
-             * @memberof ButtonCommandListItem
-             * @property {String} icon
-             */
-            icon: React.PropTypes.string
-        },
-
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

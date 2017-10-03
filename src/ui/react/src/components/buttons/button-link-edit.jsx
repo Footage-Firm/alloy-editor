@@ -13,70 +13,7 @@
     var ButtonLinkEdit = React.createClass({
         mixins: [AlloyEditor.WidgetDropdown, AlloyEditor.WidgetFocusManager, AlloyEditor.ButtonCfgProps],
 
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * List of the allowed values for the target attribute.
-             *
-             * @instance
-             * @memberof ButtonLinkEdit
-             * @property {Array} allowedTargets
-             */
-            allowedTargets: React.PropTypes.arrayOf(React.PropTypes.object),
-
-            /**
-             * Indicate if we add http:// protocol to link or not
-             *
-             * @instance
-             * @memberof ButtonLinkEdit
-             * @property {Boolean} appendProtocol
-             */
-            appendProtocol: React.PropTypes.bool,
-
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonLinkEdit
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired,
-
-            /**
-             * Default value of the link target attribute.
-             *
-             * @instance
-             * @memberof ButtonLinkEdit
-             * @property {String} defaultLinkTarget
-             */
-            defaultLinkTarget: React.PropTypes.string,
-
-            /**
-             * Indicates whether the link target selector should appear.
-             *
-             * @instance
-             * @memberof ButtonLinkEdit
-             * @property {Boolean} showTargetSelector
-             */
-            showTargetSelector: React.PropTypes.bool,
-
-            /**
-             * List of items to be rendered as possible values for the link or a function, which is
-             * supposed to retrieve the data. The function should return a Promise.
-             * The returned items must be objects with at least two properties:
-             * - title
-             * - url
-             *
-             * @instance
-             * @memberof ButtonLinkEdit
-             * @property {Function|Array} data
-             */
-            data: React.PropTypes.oneOfType([
-                React.PropTypes.func,
-                React.PropTypes.arrayOf(React.PropTypes.object)
-            ])
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

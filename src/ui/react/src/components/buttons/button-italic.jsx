@@ -13,37 +13,7 @@
     var ButtonItalic = React.createClass({
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonKeystroke],
 
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonItalic
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired,
-
-            /**
-             * The label that should be used for accessibility purposes.
-             *
-             * @instance
-             * @memberof ButtonItalic
-             * @property {String} label
-             */
-            label: React.PropTypes.string,
-
-            /**
-             * The tabIndex of the button in its toolbar current state. A value other than -1
-             * means that the button has focus and is the active element.
-             *
-             * @instance
-             * @memberof ButtonItalic
-             * @property {Number} tabIndex
-             */
-            tabIndex: React.PropTypes.number
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

@@ -7,64 +7,7 @@
      * @class ButtonTableColumn
      */
     var ButtonTableColumn = React.createClass({
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * List of the commands the button is able to handle.
-             *
-             * @instance
-             * @memberof ButtonTableColumn
-             * @property {Array} commands
-             */
-            commands: React.PropTypes.arrayOf(React.PropTypes.object),
-
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonTableColumn
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired,
-
-            /**
-             * Indicates whether the styles list is expanded or not.
-             *
-             * @instance
-             * @memberof ButtonTableColumn
-             * @property {Boolean} expanded
-             */
-            expanded: React.PropTypes.bool,
-
-            /**
-             * The label that should be used for accessibility purposes.
-             *
-             * @instance
-             * @memberof ButtonTableColumn
-             * @property {String} label
-             */
-            label: React.PropTypes.string,
-
-            /**
-             * The tabIndex of the button in its toolbar current state. A value other than -1
-             * means that the button has focus and is the active element.
-             *
-             * @instance
-             * @memberof ButtonTableColumn
-             * @property {Number} tabIndex
-             */
-            tabIndex: React.PropTypes.number,
-
-            /**
-             * Callback provided by the button host to notify when the styles list has been expanded.
-             *
-             * @instance
-             * @memberof ButtonTableColumn
-             * @property {Function} toggleDropdown
-             */
-            toggleDropdown: React.PropTypes.func
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

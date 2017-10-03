@@ -8,38 +8,7 @@
      * @class ButtonLinkTargetEdit
      */
     var ButtonLinkTargetEdit = React.createClass({
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * List of the allowed items for the target attribute. Every allowed target is an object
-             * with a `label` attribute that will be shown in the dropdown and a `value` attribute
-             * that will get set as the link target attribute.
-             *
-             * @instance
-             * @memberof ButtonLinkTargetEdit
-             * @property {Array<object>} allowedTargets
-             */
-            allowedTargets: React.PropTypes.arrayOf(React.PropTypes.object),
-
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonLinkTargetEdit
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired,
-
-            /**
-             * Label of the current target value.
-             *
-             * @instance
-             * @memberof ButtonLinkTargetEdit
-             * @property {String} selectedTarget
-             */
-            selectedTarget: React.PropTypes.string
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

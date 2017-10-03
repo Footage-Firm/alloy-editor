@@ -7,18 +7,7 @@
      * @class WidgetInteractionPoint
      */
     var WidgetInteractionPoint = {
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * The provided editor event.
-             *
-             * @instance
-             * @memberof WidgetInteractionPoint
-             * @property {SyntheticEvent} editorEvent
-             */
-            editorEvent: React.PropTypes.object
-        },
-
+        
         /**
          * Returns the position, in page coordinates, according to which a widget should appear.
          * Depending on the direction of the selection, the wdiget may appear above of or on bottom of the selection.

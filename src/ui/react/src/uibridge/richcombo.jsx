@@ -9,54 +9,7 @@
     /* istanbul ignore next */
     function noop() {}
 
-    // API not yet implemented inside the richcombo bridge. By mocking the unsupported methods, we
-    // prevent plugins from crashing if they make use of them.
-    //
-    // Some methods like `setState` clash with React's own state methods. For them, unsupported means
-    // that we don't account for the different meaning in the passed or returned arguments.
-    var UNSUPPORTED_RICHCOMBO_API = {
-        commit: noop,
-        createPanel: noop,
-        disable: noop,
-        enable: noop,
-        getState: noop,
-        hideGroup: noop,
-        hideItem: noop,
-        mark: noop,
-        //setState: noop,
-        showAll: noop,
-        startGroup: noop,
-        unmarkAll: noop
-    };
-
-    var RICH_COMBO_DEFS = {};
-
-    /**
-     * Generates a RichComboBridge React class for a given richcombo definition if it has not been
-     * already created based on the richcombo name and definition.
-     *
-     * @method generateRichComboBridge
-     * @private
-     * @param {String} richComboName The rich combo name
-     * @param {Object} richComboDefinition The rich combo definition
-     * @return {Object} The generated or already existing React RichCombo Class
-     */
-    var generateRichComboBridge = function(richComboName, richComboDefinition, editor) {
-        var RichComboBridge = AlloyEditor.Buttons[richComboName];
-
-        RICH_COMBO_DEFS[editor.name] = RICH_COMBO_DEFS[editor.name] || {};
-        RICH_COMBO_DEFS[editor.name][richComboName] = RICH_COMBO_DEFS[editor.name][richComboName] || richComboDefinition;
-        RICH_COMBO_DEFS[editor.name][richComboName].currentValue = undefined;
-
-        if (!RichComboBridge) {
-            RichComboBridge = React.createClass(
-                CKEDITOR.tools.merge(UNSUPPORTED_RICHCOMBO_API, {
-                    displayName: richComboName,
-
-                    propTypes: {
-                        editor: React.PropTypes.object.isRequired
-                    },
-
+    
                     statics: {
                         key: richComboName
                     },

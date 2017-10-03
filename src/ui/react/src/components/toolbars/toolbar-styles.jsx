@@ -15,63 +15,7 @@
     var ToolbarStyles = React.createClass({
         mixins: [AlloyEditor.WidgetDropdown, AlloyEditor.WidgetExclusive, AlloyEditor.WidgetFocusManager, AlloyEditor.ToolbarButtons, AlloyEditor.WidgetPosition, AlloyEditor.WidgetArrowBox],
 
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * The toolbar configuration.
-             *
-             * @instance
-             * @memberof ToolbarStyles
-             * @property {Object} config
-             */
-            config: React.PropTypes.object,
-
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ToolbarStyles
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired,
-
-            /**
-             * The payload from "editorInteraction" event
-             *
-             * @instance
-             * @memberof ToolbarStyles
-             * @property {Object} editorEvent
-             */
-            editorEvent: React.PropTypes.object,
-
-            /**
-             * The label that should be used for accessibility purposes.
-             *
-             * @instance
-             * @memberof ToolbarStyles
-             * @property {String} label
-             */
-            label: React.PropTypes.string,
-
-            /**
-             * Provides a callback which should be executed when a dismiss key is pressed over a toolbar to return the focus to the editor.
-             *
-             * @instance
-             * @memberof ToolbarStyles
-             * @property {Function} onDismiss
-             */
-            onDismiss: React.PropTypes.func,
-
-            /**
-             * The data, returned from {{#crossLink "CKEDITOR.plugins.ae_selectionregion/getSelectionData:method"}}{{/crossLink}}
-             *
-             * @instance
-             * @memberof ToolbarStyles
-             * @property {Object} selectionData
-             */
-            selectionData: React.PropTypes.object
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

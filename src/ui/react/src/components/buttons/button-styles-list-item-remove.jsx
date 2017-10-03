@@ -8,47 +8,7 @@
      * @class ButtonStylesListItemRemove
      */
     var ButtonStylesListItemRemove = React.createClass({
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonStylesListItemRemove
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired,
-
-            /**
-             * The label that should be used for accessibility purposes.
-             *
-             * @instance
-             * @memberof ButtonStylesListItemRemove
-             * @property {String} label
-             */
-            label: React.PropTypes.string,
-
-            /**
-             * Block styles that should be removed in addition to all other inline styles
-             *
-             * @default ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'pre']
-             * @instance
-             * @memberof ButtonStylesListItemRemove
-             * @property {Array} removeBlocks
-             */
-            removeBlocks: React.PropTypes.array,
-
-            /**
-             * The tabIndex of the button in its toolbar current state. A value other than -1
-             * means that the button has focus and is the active element.
-             *
-             * @instance
-             * @memberof ButtonStylesListItemRemove
-             * @property {Number} tabIndex
-             */
-            tabIndex: React.PropTypes.number
-        },
-
+        
         //Lifecycle. Provides static properties to the widget.
         statics: {
             /**

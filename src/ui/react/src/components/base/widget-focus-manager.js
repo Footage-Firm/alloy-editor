@@ -16,61 +16,7 @@
      * @class WidgetFocusManager
      */
     var WidgetFocusManager = {
-        // Allows validating props being passed to the component.
-        propTypes: {
-
-            /**
-             * Callback method to be invoked when the focus manager is to be dismissed. This happens
-             * in the following scenarios if a dismiss callback has been specified:
-             * - A dismiss key has been pressed
-             * - In a non-circular focus manager, when:
-             *     - The active descendant is the first one and a prev key has been pressed.
-             *     - The active descendant is the last one and a next key has been pressed.
-             *
-             * @instance
-             * @memberof WidgetFocusManager
-             * @property {Function} onDismiss
-             */
-            onDismiss: React.PropTypes.func,
-
-            /**
-             * Indicates if focus should be set to the first/last descendant when the limits are reached.
-             *
-             * @instance
-             * @memberof WidgetFocusManager
-             * @property {boolean} circular
-             */
-            circular: React.PropTypes.bool.isRequired,
-
-            /**
-             * Indicate if should focus the first child of a container
-             * @instance
-             * @memberof WidgetFocusManager
-             * @property {Boolean} focusFirstChild
-             */
-            focusFirstChild: React.PropTypes.bool,
-
-            /**
-             * String representing the CSS selector used to define the elements that should be handled.
-             *
-             * @instance
-             * @memberof WidgetFocusManager
-             * @property {String} descendants
-             */
-            descendants: React.PropTypes.string.isRequired,
-
-            /**
-             * Object representing the keys used to navigate between descendants. The format for the prop is:
-             * `{dismiss: value, dismissNext: value, dismissPrev: value, next: value, prev: value}` where
-             * value can be both a number or an array of numbers with the allowed keyCodes.
-             *
-             * @instance
-             * @memberof WidgetFocusManager
-             * @property {Object} keys
-             */
-            keys: React.PropTypes.object.isRequired
-        },
-
+        
         /**
          * Lifecycle. Invoked once, only on the client, immediately after the initial rendering occurs.
          *
