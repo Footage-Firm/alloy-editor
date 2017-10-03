@@ -11,18 +11,7 @@
     var ButtonTargetList = React.createClass({
         mixins: [AlloyEditor.WidgetFocusManager],
 
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonTargetList
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

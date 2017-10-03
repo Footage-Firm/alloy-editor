@@ -11,48 +11,7 @@
     var UI = React.createClass({
         mixins: [AlloyEditor.WidgetExclusive, AlloyEditor.WidgetFocusManager],
 
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * Localized messages for live aria updates. Should include the following messages:
-             * - noToolbar: Notification for no available toolbar in the editor.
-             * - oneToolbar: Notification for just one available toolbar in the editor.
-             * - manyToolbars: Notification for more than one available toolbar in the editor.
-             *
-             * @instance
-             * @memberof UI
-             * @property {Object} ariaUpdates
-             */
-            ariaUpdates: React.PropTypes.object,
-
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof UI
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired,
-
-            /**
-             * The delay (ms), after which key or mouse events will be processed.
-             *
-             * @instance
-             * @memberof UI
-             * @property {Number} eventsDelay
-             */
-            eventsDelay: React.PropTypes.number,
-
-            /**
-             * The toolbars configuration for this editor instance
-             *
-             * @instance
-             * @memberof UI
-             * @property {Object} toolbars
-             */
-            toolbars: React.PropTypes.object.isRequired
-        },
-
+        
         /**
          * Lifecycle. Invoked once before the component is mounted.
          *

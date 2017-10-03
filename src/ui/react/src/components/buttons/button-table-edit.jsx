@@ -11,28 +11,7 @@
      * @class ButtonTableEdit
      */
     var ButtonTableEdit = React.createClass({
-        // Allows validating props being passed to the component.
-        propTypes: {
-
-            /**
-             * Method to notify the button abandons the exclusive rendering mode.
-             *
-             * @instance
-             * @memberof ButtonTableEdit
-             * @property {Function} cancelExclusive
-             */
-            cancelExclusive: React.PropTypes.func.isRequired,
-
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonTableEdit
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

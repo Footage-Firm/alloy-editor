@@ -11,36 +11,7 @@
     var ButtonCommandsList = React.createClass({
         mixins: [AlloyEditor.WidgetFocusManager],
 
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * List of the commands the button is able to handle.
-             *
-             * @instance
-             * @memberof ButtonCommandsList
-             * @property {Array} commands
-             */
-            commands: React.PropTypes.arrayOf(React.PropTypes.object),
-
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonCommandsList
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired,
-
-            /**
-             * List id to be used for accessibility purposes such as aria-owns.
-             *
-             * @instance
-             * @memberof ButtonCommandsList
-             * @property {String} listId
-             */
-            listId: React.PropTypes.string
-        },
-
+        
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

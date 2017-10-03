@@ -11,33 +11,7 @@
     var WidgetPosition = {
         mixins: [AlloyEditor.WidgetInteractionPoint],
 
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * Should the widget to be restricted to the viewport, or not.
-             *
-             * @instance
-             * @memberof WidgetPosition
-             * @property {Boolean} constrainToViewport
-             * @default true
-             */
-            constrainToViewport: React.PropTypes.bool,
-
-            /**
-             * The gutter (vertical and horizontal) between the interaction point and where the widget
-             * should be rendered.
-             *
-             * @instance
-             * @memberof WidgetPosition
-             * @property {Object} gutter
-             * @default {
-             *     left: 0,
-             *     top: 10
-             * }
-             */
-            gutter: React.PropTypes.object
-        },
-
+        
         /**
          * Lifecycle. Returns the default values of the properties used in the widget.
          *

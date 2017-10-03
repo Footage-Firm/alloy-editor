@@ -8,18 +8,7 @@
      * @class ButtonCfgProps
      */
     var ButtonCfgProps = {
-        // Allows validating props being passed to the component.
-        propTypes: {
-            /**
-             * The editor instance where the component is being used.
-             *
-             * @instance
-             * @memberof ButtonCfgProps
-             * @property {Object} editor
-             */
-            editor: React.PropTypes.object.isRequired
-        },
-
+        
         /**
          * Merges the properties, passed to the current component with user's configuration
          * via `buttonCfg` property.
