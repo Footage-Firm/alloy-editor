@@ -4,7 +4,11 @@
     /**
      * The ButtonStyles class provides functionality for styling a selection with a list of
      * configurable and customizable styles. The allowed styles follow CKEDITOR.Style configuration
-     * (http:
+     * (http://docs.ckeditor.com/#!/api/CKEDITOR.style)
+     *
+     * @class ButtonStyles
+     */
+    var ButtonStyles = React.createClass({
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

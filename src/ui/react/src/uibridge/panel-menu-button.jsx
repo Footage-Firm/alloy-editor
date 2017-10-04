@@ -9,7 +9,35 @@
     /* istanbul ignore next */
     function noop() {}
 
-    
+    // API not yet implemented inside the panel menu button bridge. By mocking the unsupported methods, we
+    // prevent plugins from crashing if they make use of them.
+    var UNSUPPORTED_PANEL_MENU_BUTTON_API = {
+        createPanel: noop
+    };
+
+    var PANEL_MENU_DEFS = {};
+
+    /**
+     * Generates a PanelMenuButtonBridge React class for a given panelmenubutton definition if it has not been
+     * already created based on the panelmenubutton name and definition.
+     *
+     * @private
+     * @method generatePanelMenuButtonBridge
+     * @param {String} panelMenuButtonName The panel button name
+     * @param {Object} panelMenuButtonDefinition The panel button definition
+     * @return {Object} The generated or already existing React PanelMenuButton Class
+     */
+    var generatePanelMenuButtonBridge = function(panelMenuButtonName, panelMenuButtonDefinition, editor) {
+        var PanelMenuButtonBridge = AlloyEditor.Buttons[panelMenuButtonName];
+
+        PANEL_MENU_DEFS[editor.name] = PANEL_MENU_DEFS[editor.name] || {};
+        PANEL_MENU_DEFS[editor.name][panelMenuButtonName] = PANEL_MENU_DEFS[editor.name][panelMenuButtonName] || panelMenuButtonDefinition;
+
+        if (!PanelMenuButtonBridge) {
+            PanelMenuButtonBridge = React.createClass(
+                CKEDITOR.tools.merge(UNSUPPORTED_PANEL_MENU_BUTTON_API, {
+                    displayName: panelMenuButtonName,
+
                     statics: {
                         key: panelMenuButtonName
                     },
@@ -99,7 +127,7 @@
     }
 
     /* istanbul ignore else */
-    if (!CKEDITOR.plugins.get('panelbutton')) {
+    if (!CKEDITOR.plugins.get('panelbutton')) {
         CKEDITOR.UI_PANELBUTTON = 'panelbutton';
 
         CKEDITOR.plugins.add('panelbutton', {});

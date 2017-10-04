@@ -9,7 +9,40 @@
     /* istanbul ignore next */
     function noop() {}
 
-    
+    // API not yet implemented inside the menubutton bridge. By mocking the unsupported methods, we
+    // prevent plugins from crashing if they make use of them.
+    //
+    // Some methods like `getState` and `setState` clash with React's own state methods. For them,
+    // unsupported means that we don't account for the different meaning in the passed or returned
+    // arguments.
+    var UNSUPPORTED_MENUBUTTON_API = {
+        //getState: function() {},
+        //setState: function(state) {},
+        toFeature: noop
+    };
+
+    var MENUBUTTON_DEFS = {};
+
+    /**
+     * Generates a MenuButtonBridge React class for a given menuButton definition if it has not been
+     * already created based on the button name and definition.
+     *
+     * @private
+     * @method generateMenuButtonBridge
+     * @param {String} menuButtonName The menuButton's name
+     * @param {Object} menuButtonDefinition The menuButton's definition
+     * @return {Object} The generated or already existing React MenuButton Class
+     */
+    function generateMenuButtonBridge(menuButtonName, menuButtonDefinition, editor) {
+        var MenuButtonBridge = AlloyEditor.Buttons[menuButtonName];
+
+        MENUBUTTON_DEFS[editor.name] = MENUBUTTON_DEFS[editor.name] || {};
+        MENUBUTTON_DEFS[editor.name][menuButtonName] = MENUBUTTON_DEFS[editor.name][menuButtonName] || menuButtonDefinition;
+
+        if (!MenuButtonBridge) {
+            MenuButtonBridge = React.createClass(
+                CKEDITOR.tools.merge(UNSUPPORTED_MENUBUTTON_API, {
+                    displayName: menuButtonName,
                     statics: {
                         key: menuButtonName
                     },
