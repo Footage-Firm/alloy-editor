@@ -6,7 +6,7 @@
      *
      * @class ButtonTableRemove
      */
-    var ButtonTableRemove = React.createClass({
+    var ButtonTableRemove = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {

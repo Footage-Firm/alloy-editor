@@ -6,7 +6,7 @@
      *
      * @class ButtonTableHeading
      */
-    var ButtonTableHeading = React.createClass({
+    var ButtonTableHeading = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {

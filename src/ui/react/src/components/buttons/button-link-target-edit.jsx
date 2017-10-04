@@ -7,7 +7,7 @@
      *
      * @class ButtonLinkTargetEdit
      */
-    var ButtonLinkTargetEdit = React.createClass({
+    var ButtonLinkTargetEdit = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {

@@ -9,7 +9,7 @@
      *
      * @class ButtonCamera
      */
-    var ButtonCamera = React.createClass({
+    var ButtonCamera = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {

@@ -9,7 +9,7 @@
      * @uses ButtonCommandActive
      * @uses ButtonStateClasses
      */
-    var ButtonImageAlignLeft = React.createClass({
+    var ButtonImageAlignLeft = createReactClass({
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
 
         

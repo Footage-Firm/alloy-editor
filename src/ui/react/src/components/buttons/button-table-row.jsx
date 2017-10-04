@@ -6,7 +6,7 @@
      *
      * @class ButtonTableRow
      */
-    var ButtonTableRow = React.createClass({
+    var ButtonTableRow = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {

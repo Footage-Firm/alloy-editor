@@ -10,7 +10,7 @@
      *
      * @class ButtonTableEdit
      */
-    var ButtonTableEdit = React.createClass({
+    var ButtonTableEdit = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {

@@ -7,7 +7,7 @@
      *
      * @class ButtonStylesListItemRemove
      */
-    var ButtonStylesListItemRemove = React.createClass({
+    var ButtonStylesListItemRemove = createReactClass({
         
         //Lifecycle. Provides static properties to the widget.
         statics: {

@@ -8,7 +8,7 @@
      * @class ButtonCommandsList
      * @uses WidgetFocusManager
      */
-    var ButtonCommandsList = React.createClass({
+    var ButtonCommandsList = createReactClass({
         mixins: [AlloyEditor.WidgetFocusManager],
 
         

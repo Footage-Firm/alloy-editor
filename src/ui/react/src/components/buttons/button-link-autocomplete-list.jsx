@@ -8,7 +8,7 @@
      * @class ButtonLinkAutocompleteList
      * @uses WidgetFocusManager
      */
-    var ButtonLinkAutocompleteList = React.createClass({
+    var ButtonLinkAutocompleteList = createReactClass({
         mixins: [AlloyEditor.WidgetFocusManager],
 
         

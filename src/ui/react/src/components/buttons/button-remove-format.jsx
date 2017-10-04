@@ -7,7 +7,7 @@
      * @class ButtonRemoveFormat
      * @uses ButtonCommand
      */
-    var ButtonRemoveFormat = React.createClass({
+    var ButtonRemoveFormat = createReactClass({
         mixins: [AlloyEditor.ButtonCommand],
 
         

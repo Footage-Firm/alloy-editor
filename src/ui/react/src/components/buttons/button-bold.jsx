@@ -10,7 +10,7 @@
      * @uses ButtonStateClasses
      * @uses ButtonStyle
      */
-    var ButtonBold = React.createClass({
+    var ButtonBold = createReactClass({
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonKeystroke],
 
         

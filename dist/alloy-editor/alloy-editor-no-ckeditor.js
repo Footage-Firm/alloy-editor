@@ -25982,7 +25982,7 @@ CKEDITOR.tools.buildTableMap = function (table) {
         BUTTON_DEFS[editor.name][buttonName] = BUTTON_DEFS[editor.name][buttonName] || buttonDefinition;
 
         if (!ButtonBridge) {
-            ButtonBridge = React.createClass(CKEDITOR.tools.merge(UNSUPPORTED_BUTTON_API, {
+            ButtonBridge = createReactClass(CKEDITOR.tools.merge(UNSUPPORTED_BUTTON_API, {
                 displayName: buttonName,
 
                 statics: {
@@ -26133,7 +26133,7 @@ CKEDITOR.tools.buildTableMap = function (table) {
         MENUBUTTON_DEFS[editor.name][menuButtonName] = MENUBUTTON_DEFS[editor.name][menuButtonName] || menuButtonDefinition;
 
         if (!MenuButtonBridge) {
-            MenuButtonBridge = React.createClass(CKEDITOR.tools.merge(UNSUPPORTED_MENUBUTTON_API, {
+            MenuButtonBridge = createReactClass(CKEDITOR.tools.merge(UNSUPPORTED_MENUBUTTON_API, {
                 displayName: menuButtonName,
                 statics: {
                     key: menuButtonName
@@ -26423,7 +26423,7 @@ CKEDITOR.tools.buildTableMap = function (table) {
         PANEL_MENU_DEFS[editor.name][panelMenuButtonName] = PANEL_MENU_DEFS[editor.name][panelMenuButtonName] || panelMenuButtonDefinition;
 
         if (!PanelMenuButtonBridge) {
-            PanelMenuButtonBridge = React.createClass(CKEDITOR.tools.merge(UNSUPPORTED_PANEL_MENU_BUTTON_API, {
+            PanelMenuButtonBridge = createReactClass(CKEDITOR.tools.merge(UNSUPPORTED_PANEL_MENU_BUTTON_API, {
                 displayName: panelMenuButtonName,
 
                 statics: {
@@ -26613,7 +26613,7 @@ CKEDITOR.tools.buildTableMap = function (table) {
         RICH_COMBO_DEFS[editor.name][richComboName].currentValue = undefined;
 
         if (!RichComboBridge) {
-            RichComboBridge = React.createClass(CKEDITOR.tools.merge(UNSUPPORTED_RICHCOMBO_API, {
+            RichComboBridge = createReactClass(CKEDITOR.tools.merge(UNSUPPORTED_RICHCOMBO_API, {
                 displayName: richComboName,
 
                 statics: {
@@ -29421,7 +29421,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStyle
      */
 
-    var ButtonBold = React.createClass({
+    var ButtonBold = createReactClass({
         displayName: 'ButtonBold',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonKeystroke],
@@ -29490,7 +29490,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @class ButtonCameraImage
      */
 
-    var ButtonCameraImage = React.createClass({
+    var ButtonCameraImage = createReactClass({
         displayName: 'ButtonCameraImage',
 
         // Lifecycle. Provides static properties to the widget.
@@ -29704,7 +29704,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @class ButtonCamera
      */
 
-    var ButtonCamera = React.createClass({
+    var ButtonCamera = createReactClass({
         displayName: 'ButtonCamera',
 
 
@@ -29762,7 +29762,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStyle
      */
 
-    var ButtonCode = React.createClass({
+    var ButtonCode = createReactClass({
         displayName: 'ButtonCode',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonActionStyle],
@@ -29830,7 +29830,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonCommand
      */
 
-    var ButtonCommandListItem = React.createClass({
+    var ButtonCommandListItem = createReactClass({
         displayName: 'ButtonCommandListItem',
 
         mixins: [AlloyEditor.ButtonCommand],
@@ -29899,7 +29899,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses WidgetFocusManager
      */
 
-    var ButtonCommandsList = React.createClass({
+    var ButtonCommandsList = createReactClass({
         displayName: 'ButtonCommandsList',
 
         mixins: [AlloyEditor.WidgetFocusManager],
@@ -30013,7 +30013,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @class ButtonDropdown
      */
 
-    var ButtonDropdown = React.createClass({
+    var ButtonDropdown = createReactClass({
         displayName: 'ButtonDropdown',
 
         mixins: [AlloyEditor.WidgetFocusManager],
@@ -30089,7 +30089,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      *
      * @class ButtonEmbedEdit
      */
-    var ButtonEmbedEdit = React.createClass({
+    var ButtonEmbedEdit = createReactClass({
         displayName: 'ButtonEmbedEdit',
 
 
@@ -30355,7 +30355,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonKeystroke
      */
 
-    var ButtonEmbed = React.createClass({
+    var ButtonEmbed = createReactClass({
         displayName: 'ButtonEmbed',
 
         mixins: [AlloyEditor.ButtonKeystroke],
@@ -30439,7 +30439,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStyle
      */
 
-    var ButtonH1 = React.createClass({
+    var ButtonH1 = createReactClass({
         displayName: 'ButtonH1',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonActionStyle],
@@ -30508,7 +30508,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStyle
      */
 
-    var ButtonH2 = React.createClass({
+    var ButtonH2 = createReactClass({
         displayName: 'ButtonH2',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonActionStyle],
@@ -30576,7 +30576,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStyle
      */
 
-    var ButtonHline = React.createClass({
+    var ButtonHline = createReactClass({
         displayName: 'ButtonHline',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonCommand],
@@ -30644,7 +30644,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStateClasses
      */
 
-    var ButtonImageAlignCenter = React.createClass({
+    var ButtonImageAlignCenter = createReactClass({
         displayName: 'ButtonImageAlignCenter',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -30711,7 +30711,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStateClasses
      */
 
-    var ButtonImageAlignLeft = React.createClass({
+    var ButtonImageAlignLeft = createReactClass({
         displayName: 'ButtonImageAlignLeft',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -30778,7 +30778,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStateClasses
      */
 
-    var ButtonImageAlignRight = React.createClass({
+    var ButtonImageAlignRight = createReactClass({
         displayName: 'ButtonImageAlignRight',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -30842,7 +30842,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @class ButtonImage
      */
 
-    var ButtonImage = React.createClass({
+    var ButtonImage = createReactClass({
         displayName: 'ButtonImage',
 
 
@@ -30986,7 +30986,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         * @uses ButtonStateClasses
         */
 
-    var ButtonIndentBlock = React.createClass({
+    var ButtonIndentBlock = createReactClass({
         displayName: 'ButtonIndentBlock',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -31054,7 +31054,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses ButtonStyle
      */
 
-    var ButtonItalic = React.createClass({
+    var ButtonItalic = createReactClass({
         displayName: 'ButtonItalic',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonKeystroke],
@@ -31125,7 +31125,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
      * @uses WidgetFocusManager
      */
 
-    var ButtonLinkAutocompleteList = React.createClass({
+    var ButtonLinkAutocompleteList = createReactClass({
         displayName: 'ButtonLinkAutocompleteList',
 
         mixins: [AlloyEditor.WidgetFocusManager],
@@ -31333,7 +31333,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses WidgetFocusManager
      */
 
-    var ButtonLinkEdit = React.createClass({
+    var ButtonLinkEdit = createReactClass({
         displayName: 'ButtonLinkEdit',
 
         mixins: [AlloyEditor.WidgetDropdown, AlloyEditor.WidgetFocusManager, AlloyEditor.ButtonCfgProps],
@@ -31754,7 +31754,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonLinkTargetEdit
      */
 
-    var ButtonLinkTargetEdit = React.createClass({
+    var ButtonLinkTargetEdit = createReactClass({
         displayName: 'ButtonLinkTargetEdit',
 
 
@@ -31845,7 +31845,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStateClasses
      */
 
-    var ButtonLink = React.createClass({
+    var ButtonLink = createReactClass({
         displayName: 'ButtonLink',
 
         mixins: [AlloyEditor.ButtonKeystroke, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCfgProps],
@@ -31945,7 +31945,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStyle
      */
 
-    var ButtonOrderedList = React.createClass({
+    var ButtonOrderedList = createReactClass({
         displayName: 'ButtonOrderedList',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand],
@@ -32015,7 +32015,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         * @uses ButtonStateClasses
         */
 
-    var ButtonOutdentBlock = React.createClass({
+    var ButtonOutdentBlock = createReactClass({
         displayName: 'ButtonOutdentBlock',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -32083,7 +32083,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStateClasses
      */
 
-    var ButtonParagraphAlignLeft = React.createClass({
+    var ButtonParagraphAlignLeft = createReactClass({
         displayName: 'ButtonParagraphAlignLeft',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -32150,7 +32150,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStateClasses
      */
 
-    var ButtonParagraphAlignRight = React.createClass({
+    var ButtonParagraphAlignRight = createReactClass({
         displayName: 'ButtonParagraphAlignRight',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -32217,7 +32217,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStateClasses
      */
 
-    var ButtonParagraphCenter = React.createClass({
+    var ButtonParagraphCenter = createReactClass({
         displayName: 'ButtonParagraphCenter',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -32284,7 +32284,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStateClasses
      */
 
-    var ButtonParagraphJustify = React.createClass({
+    var ButtonParagraphJustify = createReactClass({
         displayName: 'ButtonParagraphJustify',
 
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
@@ -32351,7 +32351,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStyle
      */
 
-    var ButtonQuote = React.createClass({
+    var ButtonQuote = createReactClass({
         displayName: 'ButtonQuote',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand],
@@ -32419,7 +32419,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonCommand
      */
 
-    var ButtonRemoveFormat = React.createClass({
+    var ButtonRemoveFormat = createReactClass({
         displayName: 'ButtonRemoveFormat',
 
         mixins: [AlloyEditor.ButtonCommand],
@@ -32484,7 +32484,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStyle
      */
 
-    var ButtonStrike = React.createClass({
+    var ButtonStrike = createReactClass({
         displayName: 'ButtonStrike',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand],
@@ -32548,7 +32548,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonsStylesListHeader
      */
 
-    var ButtonsStylesListHeader = React.createClass({
+    var ButtonsStylesListHeader = createReactClass({
         displayName: "ButtonsStylesListHeader",
 
         /**
@@ -32586,7 +32586,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonStylesListItemRemove
      */
 
-    var ButtonStylesListItemRemove = React.createClass({
+    var ButtonStylesListItemRemove = createReactClass({
         displayName: 'ButtonStylesListItemRemove',
 
 
@@ -32676,7 +32676,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStyle
      */
 
-    var ButtonStylesListItem = React.createClass({
+    var ButtonStylesListItem = createReactClass({
         displayName: 'ButtonStylesListItem',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonActionStyle],
@@ -32765,7 +32765,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses WidgetFocusManager
      */
 
-    var ButtonStylesList = React.createClass({
+    var ButtonStylesList = createReactClass({
         displayName: 'ButtonStylesList',
 
         mixins: [AlloyEditor.WidgetFocusManager],
@@ -32919,7 +32919,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonStyles
      */
 
-    var ButtonStyles = React.createClass({
+    var ButtonStyles = createReactClass({
         displayName: 'ButtonStyles',
 
         // Lifecycle. Provides static properties to the widget.
@@ -33061,7 +33061,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStyle
      */
 
-    var ButtonSubscript = React.createClass({
+    var ButtonSubscript = createReactClass({
         displayName: 'ButtonSubscript',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand],
@@ -33129,7 +33129,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStyle
      */
 
-    var ButtonSuperscript = React.createClass({
+    var ButtonSuperscript = createReactClass({
         displayName: 'ButtonSuperscript',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand],
@@ -33194,7 +33194,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonTableCell
      */
 
-    var ButtonTableCell = React.createClass({
+    var ButtonTableCell = createReactClass({
         displayName: 'ButtonTableCell',
 
 
@@ -33292,7 +33292,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonTableColumn
      */
 
-    var ButtonTableColumn = React.createClass({
+    var ButtonTableColumn = createReactClass({
         displayName: 'ButtonTableColumn',
 
 
@@ -33377,7 +33377,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      *
      * @class ButtonTableEdit
      */
-    var ButtonTableEdit = React.createClass({
+    var ButtonTableEdit = createReactClass({
         displayName: 'ButtonTableEdit',
 
 
@@ -33561,7 +33561,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonTableHeading
      */
 
-    var ButtonTableHeading = React.createClass({
+    var ButtonTableHeading = createReactClass({
         displayName: 'ButtonTableHeading',
 
 
@@ -33666,7 +33666,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonTableRemove
      */
 
-    var ButtonTableRemove = React.createClass({
+    var ButtonTableRemove = createReactClass({
         displayName: 'ButtonTableRemove',
 
 
@@ -33730,7 +33730,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonTableRow
      */
 
-    var ButtonTableRow = React.createClass({
+    var ButtonTableRow = createReactClass({
         displayName: 'ButtonTableRow',
 
 
@@ -33817,7 +33817,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @class ButtonTable
      */
 
-    var ButtonTable = React.createClass({
+    var ButtonTable = createReactClass({
         displayName: 'ButtonTable',
 
 
@@ -33870,7 +33870,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses WidgetFocusManager
      */
 
-    var ButtonTargetList = React.createClass({
+    var ButtonTargetList = createReactClass({
         displayName: 'ButtonTargetList',
 
         mixins: [AlloyEditor.WidgetFocusManager],
@@ -34013,7 +34013,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStateClasses
      */
 
-    var ButtonTwitter = React.createClass({
+    var ButtonTwitter = createReactClass({
         displayName: 'ButtonTwitter',
 
         mixins: [AlloyEditor.ButtonStateClasses],
@@ -34132,7 +34132,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStyle
      */
 
-    var ButtonUnorderedlist = React.createClass({
+    var ButtonUnorderedlist = createReactClass({
         displayName: 'ButtonUnorderedlist',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand],
@@ -34203,7 +34203,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses ButtonStyle
      */
 
-    var ButtonUnderline = React.createClass({
+    var ButtonUnderline = createReactClass({
         displayName: 'ButtonUnderline',
 
         mixins: [AlloyEditor.ButtonStyle, AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonKeystroke],
@@ -34280,7 +34280,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses WidgetFocusManager
      * @uses WidgetPosition
      */
-    var ToolbarAdd = React.createClass({
+    var ToolbarAdd = createReactClass({
         displayName: 'ToolbarAdd',
 
         mixins: [AlloyEditor.WidgetDropdown, AlloyEditor.WidgetExclusive, AlloyEditor.WidgetFocusManager, AlloyEditor.ToolbarButtons, AlloyEditor.WidgetPosition, AlloyEditor.WidgetArrowBox],
@@ -34540,7 +34540,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses WidgetPosition
      */
 
-    var ToolbarStyles = React.createClass({
+    var ToolbarStyles = createReactClass({
         displayName: 'ToolbarStyles',
 
         mixins: [AlloyEditor.WidgetDropdown, AlloyEditor.WidgetExclusive, AlloyEditor.WidgetFocusManager, AlloyEditor.ToolbarButtons, AlloyEditor.WidgetPosition, AlloyEditor.WidgetArrowBox],
@@ -34770,7 +34770,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
      * @uses WidgetFocusManager
      */
 
-    var UI = React.createClass({
+    var UI = createReactClass({
         displayName: 'UI',
 
         mixins: [AlloyEditor.WidgetExclusive, AlloyEditor.WidgetFocusManager],

@@ -8,7 +8,7 @@
      *
      * @class ButtonStyles
      */
-    var ButtonStyles = React.createClass({
+    var ButtonStyles = createReactClass({
         // Lifecycle. Provides static properties to the widget.
         statics: {
             /**

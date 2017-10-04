@@ -9,7 +9,7 @@
      * @uses ButtonCommandActive
      * @uses ButtonStateClasses
      */
-    var ButtonParagraphAlignLeft = React.createClass({
+    var ButtonParagraphAlignLeft = createReactClass({
         mixins: [AlloyEditor.ButtonStateClasses, AlloyEditor.ButtonCommand, AlloyEditor.ButtonCommandActive],
 
         

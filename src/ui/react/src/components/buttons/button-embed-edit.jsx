@@ -10,7 +10,7 @@
      *
      * @class ButtonEmbedEdit
      */
-    var ButtonEmbedEdit = React.createClass({
+    var ButtonEmbedEdit = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {

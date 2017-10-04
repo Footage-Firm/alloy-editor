@@ -15,7 +15,7 @@
      * @uses WidgetFocusManager
      * @uses WidgetPosition
      */
-    var ToolbarAdd = React.createClass({
+    var ToolbarAdd = createReactClass({
         mixins: [AlloyEditor.WidgetDropdown, AlloyEditor.WidgetExclusive, AlloyEditor.WidgetFocusManager, AlloyEditor.ToolbarButtons, AlloyEditor.WidgetPosition, AlloyEditor.WidgetArrowBox],
 
         

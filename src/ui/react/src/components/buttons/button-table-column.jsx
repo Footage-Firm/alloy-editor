@@ -6,7 +6,7 @@
      *
      * @class ButtonTableColumn
      */
-    var ButtonTableColumn = React.createClass({
+    var ButtonTableColumn = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {

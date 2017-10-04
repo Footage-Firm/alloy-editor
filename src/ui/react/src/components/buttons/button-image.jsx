@@ -6,7 +6,7 @@
      *
      * @class ButtonImage
      */
-    var ButtonImage = React.createClass({
+    var ButtonImage = createReactClass({
         
         // Lifecycle. Provides static properties to the widget.
         statics: {
