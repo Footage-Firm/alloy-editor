@@ -1,5 +1,5 @@
 /**
- * AlloyEditor v1.4.1
+ * AlloyEditor v1.5.1
  *
  * Copyright 2014-present, Liferay, Inc.
  * All rights reserved.
@@ -27609,7 +27609,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                     }
                 }
 
-                this._clearSelections();
+                // Currently throws "Uncaught TypeError: Cannot read property 'getWindow' of undefined"
+                //this._clearSelections();
 
                 nativeEditor.destroy();
             }

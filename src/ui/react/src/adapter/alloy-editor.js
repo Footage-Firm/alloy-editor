@@ -97,7 +97,8 @@
                     }
                 }
 
-                this._clearSelections();
+                // Currently throws "Uncaught TypeError: Cannot read property 'getWindow' of undefined"
+                //this._clearSelections();
 
                 nativeEditor.destroy();
             }
